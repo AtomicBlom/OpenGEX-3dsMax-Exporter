@@ -2079,6 +2079,15 @@ void OpenGexExport::ExportAnimationTrack(Control *control, const char *target, b
 	ULONG classID = control->ClassID().PartA();
 	IKeyControl *keyInterface = GetKeyControlInterface(control);
 
+	std::string number;
+	std::stringstream strstream;
+	strstream << classID;
+	strstream >> number;
+
+	const char * c = number.c_str();
+	IndentWrite("classId: ");
+	IndentWrite(c);
+	
 	bool scaleOriented = false;
 
 	IndentWrite("Track (target = %", 0, newline);

@@ -217,7 +217,7 @@ class MorphR3 : public Modifier, TimeChangeCallback
 		TSTR SubAnimName(int i);
 		bool CheckMaterialDependency(void);
 		bool CheckSubMaterialDependency(void);
-		RefResult NotifyRefChanged(Interval changeInt,RefTargetHandle hTarget, PartID& partID, RefMessage message);
+		RefResult NotifyRefChanged(const Interval& changeInt,RefTargetHandle hTarget, PartID& partID, RefMessage message);
 		void TestMorphReferenceDependencies(const RefTargetHandle hTarget);
 		
 		CreateMouseCallBack *GetCreateMouseCallBack();
